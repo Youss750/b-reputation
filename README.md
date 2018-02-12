@@ -1,7 +1,5 @@
-API implement :
+# Implement a API in nodejs with one endpoint
+## Installation
 
-Installation
-
-npm install
-
-node server.js
+ - npm install
+ - node server.js
