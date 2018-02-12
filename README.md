@@ -8,7 +8,7 @@
 > npm install
 ```
  
- **Run mongo server**
+ **Run mongo server on port 27017**
   Then just start :
 ```
 > npm start
