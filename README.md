@@ -1,5 +1,15 @@
+
 # Implement a API in nodejs with one endpoint
 ## Installation
 
- - `npm install`
- - `node server.js`
+```
+> git clone https://github.com/Youss750/b-reputation
+> cd b-reputation/
+> npm install
+```
+ 
+ **Run mongo server**
+  Then just start :
+```
+> npm start
+```
