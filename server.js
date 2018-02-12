@@ -9,12 +9,12 @@ var Schema = mongoose.Schema;
 //______________ Get data from body_________
 
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extendend : true}));
 app.use(bodyParser.json());
+
 var multer = require('multer');
 var upload = multer();
-app.use(upload.array()); 
-app.use(express.static('public'));
+app.use(upload.array());
 
 //______________ Connect to mongo _________
 
@@ -31,14 +31,12 @@ var User = require('./model/user');
 
 //______________ Route and Request _________
 
-
-
 app.post('/add',function (req,res){
 	console.log(req.body);
 	var newUser = new User({firstName: req.body.firstName, lastName: req.body.lastName, phoneNumber: req.body.phoneNumber});
 	newUser.save(function (err) {
 		if (err) {
-			res.status(400).json({message : "the field is empty",
+			res.status(400).json({message : "the fields are empty",
 					status : "KO"});
 		}
 		else {
